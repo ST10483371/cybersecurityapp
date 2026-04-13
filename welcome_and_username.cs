@@ -26,8 +26,7 @@ namespace cybersecurityapp
             
             Console.WriteLine("\n");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Nice to meet you, " + name + "!" + "\n");
-            Console.ReadLine();
+            Console.WriteLine("LUNO: Nice to meet you, " + name + "!");
         }
     }
 }

@@ -46,10 +46,10 @@ namespace cybersecurityapp
                 if (score > bestScore)
                 {
                     bestScore = score;
-                    bestResponse = entry.Value;
+                    bestResponse = "LUNO: " + entry.Value;
                 }
             }
-            return "I'm sorry, I don't have an answer for that. Please try asking something else related to cybersecurity.";
+            return bestResponse;
         }
     }
 }
