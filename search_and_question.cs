@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 
 namespace cybersecurityapp
 {
-    internal class Chatbot
+    public class Chatbot
     {
         private Dictionary<string[], string> responses;
 
@@ -22,7 +23,33 @@ namespace cybersecurityapp
                 { new string[] { "how to create a strong password?", "tips for strong passwords" }, "To create a strong password, use a mix of uppercase and lowercase letters, numbers, and special characters. Avoid using common words or personal information." },
                 { new string[] { "what is malware?", "explain malware", "define malware" }, "Malware is malicious software designed to harm, exploit, or otherwise compromise the security of a computer system." },
                 { new string[] { "how to protect against ransomware?", "ransomware protection tips" }, "To protect against ransomware, regularly back up your data, keep your software updated, and be cautious when opening email attachments or clicking on links." }
-            };
+            }; // <-- Close the Dictionary initialization
+        }
+
+        // Move the method outside the constructor
+        public string GetResponse(string userInput)
+        {
+            string bestResponse = "I'm sorry, I don't have an answer for that. Please try asking something else related to cybersecurity.";
+            int bestScore = 0;
+            userInput = userInput.ToLower();
+            foreach (var entry in responses)
+            {
+                int score = 0;
+                foreach (var keyword in entry.Key)
+                {
+                    if (userInput.Contains(keyword))
+                    {
+                        score++;
+                    }
+                }
+
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                    bestResponse = entry.Value;
+                }
+            }
+            return "I'm sorry, I don't have an answer for that. Please try asking something else related to cybersecurity.";
         }
     }
 }
