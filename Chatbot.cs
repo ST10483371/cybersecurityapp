@@ -52,8 +52,6 @@ namespace cybersecurityapp
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     bestResponse = "LUNO: " + entry.Value;
                     Console.WriteLine("\n");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("You: ");
                 }
             }
 
@@ -66,10 +64,9 @@ namespace cybersecurityapp
 
             if (!foundMatch)
             {
-                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                 Console.WriteLine("\nLUNO: I'm sorry, I don't have an answer for that. Please try asking something else related to cybersecurity.");
-                 Console.ForegroundColor = ConsoleColor.Cyan;
-                 Console.WriteLine("You: ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("\nLUNO: I'm sorry, I don't have an answer for that. Please try asking something else related to cybersecurity.");
+                Console.ForegroundColor = ConsoleColor.Cyan;
             }
             return bestResponse;
         }

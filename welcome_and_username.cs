@@ -8,9 +8,9 @@ namespace cybersecurityapp
     {
         public void welcome_and_collect()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Hi! I'm Luno Chatbot, your go to for everything cybersecurity awareness!" + "\n");
-            Console.WriteLine("So, lets start by introducing yourself. What's your name?" + "\n");
+            Console.WriteLine("What's your name?" + "\n");
             
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("You: ");
@@ -25,8 +25,9 @@ namespace cybersecurityapp
             }
             
             Console.WriteLine("\n");
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("LUNO: Nice to meet you, " + name + "!");
         }
+
     }
 }
