@@ -23,8 +23,8 @@ namespace cybersecurityapp
             Console.WriteLine("\n\n\n");
 
             //instantiating the classes
-            
-                
+            Chatbot chat = new Chatbot();
+
             welcome_and_username user = new welcome_and_username();
 
             //calling the methods

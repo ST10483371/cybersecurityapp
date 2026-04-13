@@ -33,7 +33,7 @@ namespace cybersecurityapp
             //load the audio
             voice_play.Load();
             //then play it
-            voice_play.Play();
+            voice_play.PlaySync();
         }//end of void method
     }//end of class
 }//End of namespace
