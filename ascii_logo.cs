@@ -12,21 +12,21 @@ namespace cybersecurityapp
         }//end of constructor
 
         //method to display the ASCII logo
-        private void showascii()
+        public void showascii()
         {//start of method
             //path of the logo
             string path = @"C:\Users\Student\source\repos\cybersecurityapp\logo.png";
             Bitmap image = new Bitmap(path);
 
             // Resize for better console fit
-            int width = 150;
-            int height = 70;
+            int width = 70;
+            int height = 30;
             Bitmap resized = new Bitmap(image, new Size(width, height));
 
             // ASCII characters mapped from dark to light
             string asciiChars = "@#S%?*+;:,. ";
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             //start by the height
             for (int y = 0; y < resized.Height; y++)
