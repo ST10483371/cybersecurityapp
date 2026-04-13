@@ -8,17 +8,20 @@ namespace cybersecurityapp
     {
         public void welcome_and_collect()
         {
+            //main welcome message and username collection
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("Hi! I'm Luno Chatbot, your go to for everything cybersecurity awareness!" + "\n");
-            Console.WriteLine("What's your name?" + "\n");
+            Chatbot.TypeText("I'm Luno Chatbot, your go to for everything cybersecurity awareness!" + "\n");
+            Chatbot.TypeText("What's your name?" + "\n");
             
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("You: ");
             string name = Console.ReadLine();
+
+            // Validate the username input
             while (string.IsNullOrWhiteSpace(name))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("It seems you didn't enter a name. Please try again." + "\n");
+                Chatbot.TypeText("It seems you didn't enter a name. Please try again." + "\n");
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("You: ");
                 name = Console.ReadLine();
@@ -26,7 +29,7 @@ namespace cybersecurityapp
             
             Console.WriteLine("\n");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("LUNO: Nice to meet you, " + name + "!");
+            Chatbot.TypeText("LUNO: Nice to meet you, " + name + "!");
         }
 
     }

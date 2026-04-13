@@ -11,11 +11,12 @@ namespace cybersecurityapp
         public static void Main(string[] args)
         {//start of main
             //instantiating the voice and logo classes
-            //voice_greeting voice = new voice_greeting();
+            voice_greeting voice = new voice_greeting();
             ascii_logo ascii = new ascii_logo();
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+            //UI setup and welcome message
             Console.Title = "LUNO CHATBOT";
             Console.WriteLine("-------------------------------------------------------------------------------------------");
             Console.WriteLine("                               LUNO CYBERSECURITY CHATBOT          ");
@@ -53,9 +54,10 @@ namespace cybersecurityapp
 
                 //calling the chatbot response method
                 string response = chat.GetResponse(userInput);
-                Console.WriteLine(response);
+                Chatbot.TypeText(response, 30);
             }
 
         }//end of main
     }//end of class
+
 }//end of namespace
