@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Xml.Linq;
 
 namespace cybersecurityapp
@@ -14,9 +15,9 @@ namespace cybersecurityapp
             while (string.IsNullOrWhiteSpace(name))
             {
                 Console.WriteLine("It seems you didn't enter a name. Please try again." + "\n");
-                Console.ReadLine();
-                return;
+                name = Console.ReadLine();
             }
+            
             Console.WriteLine("\n");
             Console.WriteLine("Nice to meet you, " + name + "!" + "\n");
             Console.ReadLine();
